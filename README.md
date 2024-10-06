@@ -1,5 +1,5 @@
 
-# Scrimba-React-UseRefHook
+# Scrimba-React-useRef
 
 This project demonstrates the usage of the `useRef` hook in React to manage direct DOM manipulations and component behavior in response to user interactions. The `useRef` hook is particularly useful when you need to directly access and manipulate DOM elements without triggering a re-render of the component.
 
@@ -19,48 +19,15 @@ The key component of the project is the `MainContent` function:
 - `handleOnMouseOver`: Updates the `h1` content to "I am Hovered" when the image is hovered over.
 - The `useRef` hook helps manipulate the DOM directly without causing a component re-render.
 
-### Example Usage
-
-```javascript
-import { React, useRef } from "react";
-
-export default function MainContent() {
-  const imgRef = useRef(null);
-
-  function handleClick() {
-    imgRef.current.style.display = "block";
-    imgRef.current.innerHTML = "Button was clicked";
-  }
-
-  function handleOnMouseOver() {
-    imgRef.current.style.display = "block";
-    imgRef.current.innerHTML = "I am Hovered";
-  }
-
-  return (
-    <div className="container">
-      <div className="img-container">
-        <img
-          onMouseOver={handleOnMouseOver}
-          src="https://picsum.photos/640/360"
-        />
-        <h1 ref={imgRef}>Hello</h1>
-      </div>
-      <button onClick={handleClick}>Click me</button>
-    </div>
-  );
-}
-```
-
 ## How to Run
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/BhoomiGohil/Scrimba-React-UseRefHook.git
+   git clone https://github.com/BhoomiGohil/Scrimba-React-useRef.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Scrimba-React-UseRefHook
+   cd Scrimba-React-useRef
    ```
 3. Install the dependencies:
    ```bash
